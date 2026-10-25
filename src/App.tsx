@@ -23,6 +23,7 @@ import { Mission7KathrineSwitzer } from './components/missions/Mission7KathrineS
 import { Mission8FinalChallenge } from './components/missions/Mission8FinalChallenge';
 import { UnitReviewView } from './components/UnitReviewView';
 import { QuickBookSummaryView } from './components/QuickBookSummaryView';
+import { FullscreenButton } from './components/FullscreenButton';
 
 export default function App() {
   const [progress, setProgress] = useState<UserProgress>(loadProgress);
@@ -33,6 +34,19 @@ export default function App() {
   const [activeView, setActiveView] = useState<string>('map');
   const [showConfetti, setShowConfetti] = useState(false);
   const [reward, setReward] = useState<RewardEvent | null>(null);
+  const [isLargeText, setIsLargeText] = useState<boolean>(() => {
+    return localStorage.getItem('ciencias_large_text') === 'true';
+  });
+
+  // Apply large text mode to root html element for tablet reading
+  useEffect(() => {
+    if (isLargeText) {
+      document.documentElement.classList.add('text-size-large');
+    } else {
+      document.documentElement.classList.remove('text-size-large');
+    }
+    localStorage.setItem('ciencias_large_text', String(isLargeText));
+  }, [isLargeText]);
 
   // Modals
   const [isBookOpen, setIsBookOpen] = useState(false);
@@ -170,6 +184,8 @@ export default function App() {
         onOpenReview={() => setActiveView('review')}
         onOpenQuickSummary={() => setActiveView('quick_summary')}
         onGoHome={() => setActiveView('map')}
+        isLargeText={isLargeText}
+        onToggleLargeText={() => setIsLargeText((prev) => !prev)}
       />
 
       <main className="flex-1 p-3 sm:p-6 pb-20">
@@ -284,6 +300,9 @@ export default function App() {
         onClose={() => setIsAdultsGuideOpen(false)}
         onResetProgress={handleReset}
       />
+
+      {/* Persistent Floating Fullscreen button on Tablet & Mobile */}
+      <FullscreenButton variant="floating" showLabel={true} />
     </div>
   );
 }

@@ -292,7 +292,7 @@ export const MissionsMap: React.FC<Props> = ({
             >
               {/* Top Golden Ribbon: "MISIÓN X" */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10">
-                <div className="game-ribbon-yellow px-4 py-1 text-[11px] font-black uppercase tracking-wider">
+                <div className="game-ribbon-yellow px-4 py-1 text-xs sm:text-sm font-black uppercase tracking-wider">
                   Misión {mission.order}
                 </div>
               </div>
@@ -309,25 +309,25 @@ export const MissionsMap: React.FC<Props> = ({
                   </div>
 
                   {isCompleted && (
-                    <div className="absolute top-2 right-2 bg-emerald-500 text-white font-black text-[10px] px-2 py-0.5 rounded-full border border-emerald-300 shadow-xs flex items-center gap-1">
-                      <CheckCircle className="w-3 h-3" />
+                    <div className="absolute top-2 right-2 bg-emerald-500 text-white font-black text-xs px-2.5 py-0.5 rounded-full border border-emerald-300 shadow-xs flex items-center gap-1">
+                      <CheckCircle className="w-3.5 h-3.5" />
                       <span>¡Superada!</span>
                     </div>
                   )}
                 </div>
 
                 {/* Enhanced White Game Box for Title & Subtitle with dark, high-contrast text */}
-                <div className="game-card-info-box p-3.5 sm:p-4 text-left mb-6 flex-1 flex flex-col justify-center min-h-[112px]">
+                <div className="game-card-info-box p-3.5 sm:p-4 text-left mb-6 flex-1 flex flex-col justify-center min-h-[115px]">
                   {/* Category Chip */}
-                  <div className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-black text-indigo-900 bg-indigo-100/95 px-2.5 py-0.5 rounded-full mb-1.5 w-fit border border-indigo-200 shadow-2xs">
+                  <div className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-black text-indigo-900 bg-indigo-100/95 px-2.5 py-1 rounded-full mb-1.5 w-fit border border-indigo-200 shadow-2xs">
                     <span>{mission.badgeIcon}</span>
-                    <span className="truncate max-w-[180px]">{mission.badgeName}</span>
+                    <span className="truncate max-w-[190px]">{mission.badgeName}</span>
                   </div>
 
-                  <h3 className="font-black text-slate-900 text-sm sm:text-[15px] leading-snug tracking-tight">
+                  <h3 className="font-black text-slate-900 text-base sm:text-lg leading-snug tracking-tight">
                     {mission.title}
                   </h3>
-                  <p className="text-xs sm:text-[13px] text-slate-700 font-bold mt-1 leading-snug">
+                  <p className="text-sm sm:text-base text-slate-700 font-bold mt-1 leading-snug">
                     {mission.subtitle}
                   </p>
                 </div>

@@ -1,5 +1,48 @@
 @import "tailwindcss";
 
+/* Base Font Scaling for Kids (7 years old) on Tablets & Mobile */
+html {
+  font-size: 18px;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (min-width: 640px) {
+  html {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Standard Tablet viewport (iPad, Android tablets): generous reading size */
+  html {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* iPad Pro / Larger tablets */
+  html {
+    font-size: 20px;
+  }
+}
+
+/* Extra large text mode toggle for students who need even larger letters */
+html.text-size-large {
+  font-size: 21px;
+}
+@media (min-width: 768px) {
+  html.text-size-large {
+    font-size: 23px;
+  }
+}
+
+body {
+  font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.015em;
+  font-weight: 600;
+}
+
 @layer components {
   /* Deep celestial background */
   .game-canvas-bg {

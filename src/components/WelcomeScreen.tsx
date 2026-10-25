@@ -83,7 +83,7 @@ export const WelcomeScreen: React.FC<Props> = ({
           {/* Name input & Avatar selector */}
           <div className="mt-5 space-y-4 bg-purple-900/50 p-4 sm:p-5 rounded-3xl border border-purple-400/40 text-left backdrop-blur-xs">
             <div>
-              <label htmlFor="student-name" className="block text-xs font-black text-amber-300 uppercase tracking-wide mb-1.5 drop-shadow-xs">
+              <label htmlFor="student-name" className="block text-sm sm:text-base font-black text-amber-300 uppercase tracking-wide mb-1.5 drop-shadow-xs">
                 ¿Cómo te llamas?
               </label>
               <input
@@ -92,12 +92,12 @@ export const WelcomeScreen: React.FC<Props> = ({
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Tu nombre aquí..."
-                className="w-full px-4 py-3 bg-white rounded-full border-2 border-indigo-300 font-black text-slate-800 text-base shadow-[0_3px_0_0_#9cb0e2] focus:outline-none focus:ring-4 focus:ring-amber-300"
+                className="w-full px-4 py-3 bg-white rounded-full border-2 border-indigo-300 font-black text-slate-800 text-base sm:text-lg shadow-[0_3px_0_0_#9cb0e2] focus:outline-none focus:ring-4 focus:ring-amber-300"
               />
             </div>
 
             <div>
-              <span className="block text-xs font-black text-amber-300 uppercase tracking-wide mb-2 drop-shadow-xs">
+              <span className="block text-sm sm:text-base font-black text-amber-300 uppercase tracking-wide mb-2 drop-shadow-xs">
                 Elige tu avatar de científica:
               </span>
               <div className="grid grid-cols-4 gap-2">

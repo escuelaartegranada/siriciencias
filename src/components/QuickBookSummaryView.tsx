@@ -395,10 +395,10 @@ export const QuickBookSummaryView: React.FC<Props> = ({
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <span className="text-[11px] font-black text-slate-800 bg-slate-100 px-2.5 py-1 rounded-full border border-slate-300">
+                    <span className="text-xs sm:text-sm font-black text-slate-800 bg-slate-100 px-3 py-1 rounded-full border border-slate-300">
                       {concept.tag}
                     </span>
-                    <span className="text-xs font-black px-2.5 py-1 rounded-full bg-gradient-to-r text-white shadow-2xs">
+                    <span className="text-xs sm:text-sm font-black px-3 py-1 rounded-full bg-gradient-to-r text-white shadow-2xs">
                       {concept.badge}
                     </span>
                   </div>
@@ -406,7 +406,7 @@ export const QuickBookSummaryView: React.FC<Props> = ({
                   <NarratorSpeaker text={concept.narration} size="sm" />
                 </div>
 
-                <h3 className="text-base sm:text-lg font-black text-slate-900 leading-snug">
+                <h3 className="text-lg sm:text-xl font-black text-slate-900 leading-snug">
                   {concept.title}
                 </h3>
               </div>
@@ -415,7 +415,7 @@ export const QuickBookSummaryView: React.FC<Props> = ({
               <div>{concept.drawings}</div>
 
               {/* Summary Bullet Points */}
-              <div className="space-y-1.5 bg-slate-50 p-3.5 rounded-2xl border border-slate-200 text-xs font-semibold text-slate-800 leading-relaxed">
+              <div className="space-y-2 bg-slate-50 p-4 rounded-2xl border border-slate-200 text-sm sm:text-base font-bold text-slate-800 leading-relaxed">
                 {concept.summaryPoints.map((pt, idx) => (
                   <p key={idx} className="flex items-start gap-1.5">
                     <span>{pt}</span>
@@ -424,8 +424,8 @@ export const QuickBookSummaryView: React.FC<Props> = ({
               </div>
 
               {/* Exam Tip Box */}
-              <div className="p-2.5 rounded-xl bg-amber-50 border border-amber-300 text-[11px] font-black text-amber-950 flex items-center gap-1.5">
-                <Sparkles className="w-4 h-4 text-amber-600 flex-shrink-0" />
+              <div className="p-3 rounded-xl bg-amber-50 border border-amber-300 text-xs sm:text-sm font-black text-amber-950 flex items-center gap-2">
+                <Sparkles className="w-5 h-5 text-amber-600 flex-shrink-0" />
                 <span>{concept.keyExamTip}</span>
               </div>
 

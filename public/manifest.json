@@ -1,0 +1,17 @@
+{
+  "name": "Mi Cuerpo Funciona - Ciencias 2º Primaria",
+  "short_name": "Mi Cuerpo",
+  "description": "Aplicación interactiva y táctil para repasar el Tema 1 de Ciencias Naturales de 2º de Primaria con juegos didácticos, narraciones de voz y música.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c1224",
+  "theme_color": "#121933",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}
