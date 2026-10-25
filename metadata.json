@@ -1,0 +1,6 @@
+{
+  "name": "Mi Cuerpo Funciona - Ciencias 2º Primaria",
+  "description": "Aplicación interactiva y táctil para repasar el Tema 1 de Ciencias Naturales de 2º de Primaria con juegos didácticos, narraciones de voz y música.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
